@@ -17,7 +17,7 @@ export class TodoItem{
     description : string;
     status : boolean;
 
-    constructor(value : string){
+    constructor(value : string, status : boolean){
         this.description = value;
         this.status = false;
     }

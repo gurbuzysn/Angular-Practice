@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from './model';
+import { Model, TodoItem } from './model';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,10 @@ import { Model } from './model';
 })
 export class AppComponent {
   model = new Model();  
+
+  addItem(value : string){
+    if(value){
+      this.model.items.push(new TodoItem(value,false));
+    }
+  }
 }

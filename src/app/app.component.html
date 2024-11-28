@@ -14,8 +14,19 @@
         <button class="btn btn-primary">Add Item</button>
       </div>
 
-      <table>
-        
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of model.items">
+            <th>{{ item.description }}</th>
+            <th>{{ item.status }}</th>
+          </tr>
+        </tbody>
       </table>
 
     </div>

@@ -14,7 +14,7 @@
 
       <div class="input-group mb-3">
         <input class="form-control me-3" type="text" placeholder="Add Item" #todoItemText>
-        <button class="btn btn-primary" (onclick)="addItem(todoItemText.value)">Add Item</button>
+        <button class="btn btn-primary" (click)="addItem(todoItemText.value); todoItemText.value = ''">Add Item</button>
       </div>
 
       <div class="form-control mb-3">
@@ -32,7 +32,7 @@
         <tbody>
           <tr *ngFor="let item of model.items">
             <th>{{ item.description }}</th>
-            <input type="checkbox">
+            <input type="checkbox" [(ngModel)] = "item.status">
             <th>{{ item.status }}</th>
           </tr>
         </tbody>

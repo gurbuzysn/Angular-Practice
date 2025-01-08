@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-//import {Movie} from '../movie';
+import {Movie} from '../movie';
 
 
 @Component({
@@ -10,5 +10,8 @@ import { Component } from "@angular/core";
 export class MoviesComponent{
     title: string = 'Filmler Sayfası';
     
-
+    movie: Movie = {
+        id: 1,
+        name: 'Movie 1'
+    };
 }

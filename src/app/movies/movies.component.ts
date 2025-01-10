@@ -10,8 +10,5 @@ import {Movie} from '../movie';
 export class MoviesComponent{
     title: string = 'Filmler Sayfası';
     
-    movie: Movie = {
-        id: 1,
-        name: 'Movie 1'
-    };
+   movies = ['Movie 1', 'Movie 2', 'Movie 33']
 }

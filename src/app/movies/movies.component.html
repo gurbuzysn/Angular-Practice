@@ -5,7 +5,7 @@
 </div>
 
 <ul class="list-group list-group-flush">
-    <li *ngFor="let movie of movies" (click)="onSelect()" class="list-group-item">
+    <li *ngFor="let movie of movies" (click)="onSelect(movie)" class="list-group-item active">
         <span class="badge badge-primary">{{movie.id}}</span> {{movie.name}}
         <span class="close">x</span>
     </li>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'logging',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./logging.component.css']
 })
 export class LoggingComponent {
+
+  constructor(public loggingService : LoggingService){}
+
+  
 
 }

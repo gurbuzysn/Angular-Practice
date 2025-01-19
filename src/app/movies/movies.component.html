@@ -1,15 +1,13 @@
-<movie-detail [movie]="selectedMovie"></movie-detail>
-
-<div class="card">
+ <div class="card">
   <div class="card-header p-3">
     {{ title }}
   </div>
   <ul class="list-group list-group-flush">
     <li
       *ngFor="let movie of movies"
-      (click)="onSelect(movie)"
+      routerLink="/detail/{{movie.id}}"
       class="list-group-item"
-      [class.active]="movie === selectedMovie"
+      
     >
       <span class="badge badge-primary">{{ movie.id }}</span> {{ movie.name }}
       <span class="close">x</span>

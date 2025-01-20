@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Movie } from "../movie";
 import { MovieService } from "../movie.service";
+import { HttpClient } from "@angular/common/http";
 
 
 @Component({
@@ -14,7 +15,10 @@ export class MoviesComponent{
     selectedMovie : Movie;
 
 
-    constructor(private movieService: MovieService){}
+    constructor(
+        private movieService: MovieService,
+        private http: HttpClient
+    ){}
 
     ngOnInit():void{
         this.getMovies();
